@@ -1,0 +1,13 @@
+Copy, Move, Delete options with keyboard shortcuts
+
+Recycle Bin
+
+Toggle layout between List and Icon view
+
+Show file and folder details/properties
+
+root drive
+
+temporary files/folders
+
+Use smooth page navigation instead of top loading bar
