@@ -1,0 +1,39 @@
+nav {
+  background-color: rgb(0, 0, 0);
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.318);
+
+  .logo {
+    color: gold;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Lobster", cursive;
+  }
+
+  .links {
+    display: flex;
+    gap: 3rem;
+
+    .link {
+      color: rgba(255, 255, 255, 0.73);
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.212);
+      }
+
+      svg {
+        position: relative;
+        top: 0.2rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
