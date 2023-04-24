@@ -33,7 +33,8 @@ export default function Register() {
       await updateProfile(userCredential.user, { displayName: name });
 
       // redirect back
-      router.back();
+      const { prev } = router.query as { prev: string };
+      router.push(prev || "/");
     } catch (error: any) {
       setError(error.message);
     }
@@ -62,7 +63,8 @@ export default function Register() {
         />
 
         <p className="msg">
-          Already have an account? <Link href="/login">Login</Link>
+          Already have an account?{" "}
+          <Link href={`/login?prev=${router.query.prev || "/"}`}>Login</Link>
         </p>
 
         <button type="submit" className="btn main">

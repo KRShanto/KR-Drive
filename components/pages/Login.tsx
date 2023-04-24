@@ -24,7 +24,8 @@ export default function Login() {
       await signInWithEmailAndPassword(auth, email, password);
 
       // redirect back
-      router.back();
+      const { prev } = router.query as { prev: string };
+      router.push(prev || "/");
     } catch (error: any) {
       setError(error.message);
     }
@@ -52,7 +53,10 @@ export default function Login() {
         />
 
         <p className="msg">
-          Don&apos;t have an account? <Link href="/register">Register</Link>
+          Don&apos;t have an account?
+          <Link href={`/register?prev=${router.query.prev || "/"}`}>
+            Register
+          </Link>
         </p>
 
         <button type="submit" className="btn main">
