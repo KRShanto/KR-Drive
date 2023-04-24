@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [progress, setProgress] = useState(0);
   const router = useRouter();
 
-  const { loading } = useLoadingStore((state) => state);
+  const { loading, turnOff, turnOn } = useLoadingStore((state) => state);
   const { popup } = usePopupStore((state) => state);
   const { setUser } = useAuthStore((state) => state);
 
@@ -32,9 +32,10 @@ export default function App({ Component, pageProps }: AppProps) {
           photoURL: user.photoURL,
         });
       } else {
+        turnOn();
         setTimeout(() => {
-          // setLoggedIn(false);
           setUser(null);
+          turnOff();
         }, 2000);
       }
     });

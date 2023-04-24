@@ -42,7 +42,7 @@ export default function CreateText() {
           id,
           title: name,
           url: downloadURL,
-          type: "File",
+          type: "TXT",
           parent: under,
           createdAt: new Date(),
           description: "",

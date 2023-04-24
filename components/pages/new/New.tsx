@@ -13,7 +13,7 @@ export default function New() {
   return (
     <div id="New">
       <h1 className="heading">
-        Create New inside <span className="path">{under}</span>
+        Create New inside <span className="path">{under ? under : "/"}</span>
       </h1>
 
       <div className="links">
@@ -27,10 +27,10 @@ export default function New() {
           Create Folder
         </Link>
 
-        <Link href={`/new/create-note?under=${under || ""}`} className="link">
+        {/* <Link href={`/new/create-note?under=${under || ""}`} className="link">
           <FiFilePlus />
           Create Note
-        </Link>
+        </Link> */}
 
         <Link href={`/new/upload-file?under=${under || ""}`} className="link">
           <FiUpload />

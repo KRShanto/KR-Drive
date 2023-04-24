@@ -3,7 +3,16 @@ export default interface Media {
   title: string;
   description: string;
   url: string;
-  type: "File" | "Folder";
+  type:
+    | "TXT"
+    | "PDF"
+    | "JPG"
+    | "PNG"
+    | "MP4"
+    | "MP3"
+    | "WAV"
+    | "FOLDER"
+    | "OTHER";
   parent: string | null;
   creator: string;
   authorizedUsers: string[];

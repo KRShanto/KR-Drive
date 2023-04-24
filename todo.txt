@@ -11,3 +11,5 @@ root drive
 temporary files/folders
 
 Use smooth page navigation instead of top loading bar
+
+Use loaders wherver needed
