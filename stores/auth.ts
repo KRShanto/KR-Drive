@@ -1,13 +1,14 @@
+import UserType from "@/types/user";
 import { create } from "zustand";
 
 interface AuthState {
-  loggedIn: boolean | null;
-  setLoggedIn: (loggedIn: boolean) => void;
+  user: UserType | null | "loading";
+  setUser: (user: UserType | null) => void;
 }
 
 const useAuthStore = create<AuthState>((set) => ({
-  loggedIn: null,
-  setLoggedIn: (loggedIn) => set({ loggedIn }),
+  user: "loading",
+  setUser: (user) => set({ user }),
 }));
 
 export default useAuthStore;

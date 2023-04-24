@@ -19,15 +19,22 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const { loading } = useLoadingStore((state) => state);
   const { popup } = usePopupStore((state) => state);
-  const { setLoggedIn } = useAuthStore((state) => state);
+  const { setUser } = useAuthStore((state) => state);
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        setLoggedIn(true);
+        // setLoggedIn(true);
+        setUser({
+          uid: user.uid,
+          email: user.email || "",
+          name: user.displayName || "",
+          photoURL: user.photoURL,
+        });
       } else {
         setTimeout(() => {
-          setLoggedIn(false);
+          // setLoggedIn(false);
+          setUser(null);
         }, 2000);
       }
     });
