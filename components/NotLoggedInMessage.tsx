@@ -5,7 +5,7 @@ export default function NotLoggedInMessage({ task }: { task: string }) {
   return (
     <div className="not-logged-in">
       <h2 className="heading">You need to be logged in to {task}</h2>
-      <Link href="/login" className="btn skyblue">
+      <Link href="/login" className="link">
         Go To Login
       </Link>
     </div>

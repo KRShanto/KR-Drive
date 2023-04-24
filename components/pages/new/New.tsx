@@ -17,22 +17,22 @@ export default function New() {
       </h1>
 
       <div className="links">
-        <Link href="/new/create-text" className="link">
+        <Link href={`/new/create-text?under=${under || ""}`} className="link">
           <FiFileText />
           Create Text File
         </Link>
 
-        <Link href="/new/create-folder" className="link">
+        <Link href={`/new/create-folder?under=${under || ""}`} className="link">
           <FiFolder />
           Create Folder
         </Link>
 
-        <Link href="/new/create-note" className="link">
+        <Link href={`/new/create-note?under=${under || ""}`} className="link">
           <FiFilePlus />
           Create Note
         </Link>
 
-        <Link href="/new/upload" className="link">
+        <Link href={`/new/upload-file?under=${under || ""}`} className="link">
           <FiUpload />
           Upload File/Folder
         </Link>
